@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<!--
+    html
+
+    hypertext
+          hiper texto
+
+    
+    markup
+         marcação de texto
+
+
+    language
+        linguagem
+-->
+
+
+<head>
+    <title> Perfect Study-cadastro</title>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&Ubuntu:wght@700display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="/styles/create-point.css">
+
+
+    <script type="text/javascript">
+        function validar() {
+            var nome =formuser.nome.value;
+            var email =formuser.email.value;
+            var senha =formuser.senha.value;
+
+            if (nome == "") {
+                alert('preencha o campo nome.') ;
+                formuser.nome.focus() ;
+                return false;   
+            }
+
+            if (email == "") {
+                alert('preencha o campo E-mail.') ;
+                formuser.email.focus() ;
+                return false;
+            }
+            if (senha == "" || senha.length <5) {
+                alert('preencha o campo senha com minimo de 6 caracteres.') ;
+                formuser.senha.focus() ;
+                return false;
+            }
+         }
+         </script>
+</head>
+<body>
+
+    <div id="page-home">       
+         <div class="content"> 
+         <header>
+          <img src="/assets/Logo.png" alt="logomarca">
+         <a href="http://127.0.0.1:5500/index.html">
+          <span></span>
+            voltar
+            </a>
+        </header>
+
+        <main>
+                    
+        <h1 >Cadastre-se</h1>
+        <form name="formuser" action="enviar.php" method="post">
+            Nome:<input type="text" name="nome" ><br><br>
+            E-mail:<input type="email" name="email" ><br><br>
+           
+
+
+            senha:<input type="password" name="senha" ><br><br>
+            <small id="emailHelp" class="form-text text-muted">(We'll never share your email with anyone else.)</small>
+
+            <input type="submit" onclick="return validar()">
+        </form>
+        
+
+        <p></p>
+        
+        <a href="#">
+            <a href="http://127.0.0.1:5500/create-point.html">
+                
+ 
+       
+
+          </main>   
+     </div>
+    </div>      
+</body>
+</html>
+
+
+
+
